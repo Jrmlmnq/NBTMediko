@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "205724356919",
+    "firebase_url": "https://mediko-86139.firebaseio.com",
+    "project_id": "mediko-86139",
+    "storage_bucket": "mediko-86139.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:205724356919:android:7d4372e1b60cfc5a",
+        "android_client_info": {
+          "package_name": "com.example.francis.samsung_mediko"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "205724356919-v7ljb22pq2p86mcheck14a7jhk77cfeb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBpHflTj_8y3Vxf6Wahp3y_L9vE1q8MImo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
