@@ -40,7 +40,7 @@ public class RegisterActivity extends AppCompatActivity{
             @Override
             public void onClick(View view) {
                 String email = (String) ((TextView) findViewById(R.id.eEdit)).getText().toString();
-                String password = (String) ((TextView) findViewById(R.id.eEdit)).getText().toString();
+                String password = (String) ((TextView) findViewById(R.id.pEdit)).getText().toString();
                 mAuth.createUserWithEmailAndPassword(email, password)
                         .addOnCompleteListener(RegisterActivity.this, new OnCompleteListener<AuthResult>() {
                             @Override
