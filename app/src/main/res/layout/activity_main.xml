@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,7 +11,6 @@
     android:padding="10dp"
     android:background="@android:color/background_light"
     android:orientation="vertical">
-
     <LinearLayout
         android:clipToPadding="false"
         android:gravity="center"
@@ -19,37 +21,114 @@
             android:layout_width="160dp"
             android:layout_height="190dp"
             android:layout_margin="10dp">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:gravity="center">
-            <RelativeLayout
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="center_horizontal">
-                <ImageView
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    android:background="@drawable/circlebackgroundbrown"/>
-                >
-                <ImageView
-                    android:layout_width="120dp"
-                    android:layout_height="120dp"
-                    android:src="@drawable/loader"
-                    android:layout_centerInParent="true"
-                    android:paddingBottom="40dp"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="19dp"
-                    android:text="Medicine Delivery"
-                    android:textStyle="bold"
-                    android:layout_alignParentBottom="true"/>
-            </RelativeLayout>
-        </LinearLayout>
+                android:orientation="vertical"
+                android:gravity="center">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal">
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:background="@drawable/circlebackgroundredorange"/>
+                    >
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:src="@drawable/medicine"
+                        android:layout_centerInParent="true"
+                        android:paddingBottom="40dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="19dp"
+                        android:text="List of Medicines"
+                        android:textStyle="bold"
+                        android:layout_alignParentBottom="true"/>
+                </RelativeLayout>
+            </LinearLayout>
         </android.support.v7.widget.CardView>
-
+        <android.support.v7.widget.CardView
+            android:layout_width="160dp"
+            android:layout_height="190dp"
+            android:layout_margin="10dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal">
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:background="@drawable/circlebackgroundgreen"/>
+                    >
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:src="@drawable/sick"
+                        android:layout_centerInParent="true"
+                        android:paddingBottom="40dp"
+                        android:paddingRight="5dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="19dp"
+                        android:text="List of Symptoms"
+                        android:textStyle="bold"
+                        android:layout_alignParentBottom="true"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+    <LinearLayout
+        android:clipToPadding="false"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <android.support.v7.widget.CardView
+            android:layout_width="160dp"
+            android:layout_height="190dp"
+            android:layout_margin="10dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal">
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:background="@drawable/circlebackgroundbrown"/>
+                    >
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:src="@drawable/loader"
+                        android:layout_centerInParent="true"
+                        android:paddingBottom="40dp"
+                        android:paddingRight="10dp"/>
+                    <TextView
+                        android:layout_centerInParent="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="19dp"
+                        android:text="Delivery Status"
+                        android:textStyle="bold"
+                        android:layout_alignParentBottom="true" />
+                </RelativeLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
         <android.support.v7.widget.CardView
         android:layout_width="160dp"
         android:layout_height="190dp"
@@ -110,19 +189,19 @@
                     <ImageView
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:background="@drawable/circlebackgroundredorange"/>
+                        android:background="@drawable/circlebackgroundpeach"/>
                     >
                     <ImageView
                         android:layout_width="120dp"
                         android:layout_height="120dp"
-                        android:src="@drawable/loader"
+                        android:src="@drawable/boy"
                         android:layout_centerInParent="true"
                         android:paddingBottom="40dp"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="19dp"
-                        android:text="List of Medicines"
+                        android:text="My Profile"
                         android:textStyle="bold"
                         android:layout_alignParentBottom="true"/>
                 </RelativeLayout>
@@ -144,25 +223,25 @@
                     <ImageView
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:background="@drawable/circlebackgroundblue"/>
+                        android:background="@drawable/circlebackgroundsamsung"/>
                     >
                     <ImageView
                         android:layout_width="120dp"
                         android:layout_height="120dp"
-                        android:src="@drawable/doctor"
+                        android:src="@drawable/samsung"
                         android:layout_centerInParent="true"
                         android:paddingBottom="40dp"
                         android:paddingRight="10dp"/>
                     <TextView
-                        android:layout_centerInParent="true"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="19dp"
-                        android:text="Your Doctors"
+                        android:text="Samsung 321"
                         android:textStyle="bold"
-                        android:layout_alignParentBottom="true" />
+                        android:layout_alignParentBottom="true"/>
                 </RelativeLayout>
             </LinearLayout>
         </android.support.v7.widget.CardView>
     </LinearLayout>
 </LinearLayout>
+</ScrollView>
