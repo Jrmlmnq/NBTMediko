@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/symptomslist_activity"
     android:orientation="vertical">
 
     <RelativeLayout
         android:layout_height="80dp"
         android:layout_width="match_parent"
-        android:background="#034ea2"
+        android:background="@color/colorEBlue"
         android:gravity="center_vertical">
 
         <ImageButton
@@ -19,22 +23,12 @@
 
     </RelativeLayout>
 
-    <LinearLayout
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/symptomsList"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        app:fastScrollEnabled="true"
+        app:fastScrollVerticalThumbDrawable="@drawable/thumb_drawable">
 
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/symptomsList"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <xyz.danoz.recyclerviewfastscroller.vertical.VerticalRecyclerViewFastScroller
-                android:layout_width="20dp"
-                android:layout_height="match_parent">
-
-            </xyz.danoz.recyclerviewfastscroller.vertical.VerticalRecyclerViewFastScroller>
-
-        </android.support.v7.widget.RecyclerView>
-
-    </LinearLayout>
+    </android.support.v7.widget.RecyclerView>
 </LinearLayout>

@@ -12,13 +12,10 @@
         android:background="@color/colorPBlue"
         android:gravity="center_vertical">
 
-        <!-- android:background="@drawable/back" -->
         <ImageButton
-
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginStart="5dp"
-
             android:id="@+id/logOutBtn"/>
 
         <ImageView
@@ -70,7 +67,6 @@
                         android:orientation="vertical"
                         android:gravity="center">
                         <RelativeLayout
-
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:gravity="center_horizontal">
@@ -106,7 +102,6 @@
                         android:orientation="vertical"
                         android:gravity="center">
                         <RelativeLayout
-
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:gravity="center_horizontal">

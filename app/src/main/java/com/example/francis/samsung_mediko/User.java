@@ -10,7 +10,7 @@ public class User {
     private String firstName;
     private String lastName;
     private String mI;
-    private String gender;
+    private String cpNo;
     private String address;
     private LatLng geoLoc;
     private Map<String, Boolean> doctorKeys;
@@ -18,12 +18,12 @@ public class User {
 
     public User(){}
 
-    public User(String email, String firstName, String lastName, String mI, String gender, String address, LatLng geoLoc, Map<String, Boolean> doctorKeys, boolean premium) {
+    public User(String email, String firstName, String lastName, String mI, String cpNo, String address, LatLng geoLoc, Map<String, Boolean> doctorKeys, boolean premium) {
         this.email = email;
         this.firstName = firstName;
         this.lastName = lastName;
         this.mI = mI;
-        this.gender = gender;
+        this.cpNo = cpNo;
         this.address = address;
         this.geoLoc = geoLoc;
         this.doctorKeys = doctorKeys;
@@ -62,12 +62,12 @@ public class User {
         this.mI = mI;
     }
 
-    public String getGender() {
-        return gender;
+    public String getCpNo() {
+        return cpNo;
     }
 
-    public void setGender(String gender) {
-        this.gender = gender;
+    public void setCpNo(String cpNo) {
+        this.cpNo = cpNo;
     }
 
     public Map<String, Boolean> getDoctorKeys() {
