@@ -15,8 +15,8 @@ public class HomePageActivity extends AppCompatActivity {
 
         // Get the different image buttons here
         CardView listOfMedicines = (CardView) findViewById(R.id.medicineList);
-        CardView listOfSymptoms  = (CardView) findViewById(R.id.symptomsList);
-        CardView deliveryStatus  = (CardView) findViewById(R.id.deliveryStatus);
+        CardView listOfSymptoms  = findViewById(R.id.symptomsList);
+      CardView deliveryStatus  = (CardView) findViewById(R.id.deliveryStatus);
         CardView myDoctors       = (CardView) findViewById(R.id.myDoctors);
         CardView myProfile       = (CardView) findViewById(R.id.myProfile);
         CardView samsungBtn      = (CardView) findViewById(R.id.samsungBtn);

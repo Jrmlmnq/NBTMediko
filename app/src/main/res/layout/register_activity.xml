@@ -6,256 +6,327 @@
     android:padding="10dp"
     android:orientation="vertical"
     android:background="@color/colorEBlue">
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/registerBackButton"
-        android:text="Back"/>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="12dp">
-
-        <TextView
+        <Button
+            android:id="@+id/btnBack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="16dp"
-            android:text="First Name: "
-            android:id="@+id/eLabel"
-            android:layout_toStartOf="@id/eEdit"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="7dp"/>
+            android:background="@color/colorRedOrange"
+            android:textColor="@color/colorWhite"
+            android:text="Back"/>
 
-        <EditText
-            android:layout_width="160dp"
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:id="@+id/eEdit"
-            android:layout_marginRight="20dp"/>
+            android:padding="12dp">
 
-    </RelativeLayout>
+            <TextView
+                android:id="@+id/eLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="7dp"
+                android:layout_toStartOf="@id/eFName"
+                android:text="First Name: "
+                android:textColor="@color/colorWhite"
+                android:textSize="16dp" />
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="12dp">
+            <EditText
+                android:id="@+id/eFName"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="20dp"
+                android:backgroundTint="@color/colorWhite"
+                android:textColor="@color/colorWhite" />
 
-        <TextView
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/eLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="7dp"
+                android:layout_toStartOf="@id/eLName"
+                android:text="Last Name: "
+                android:textColor="@color/colorWhite"
+                android:textSize="16dp" />
+
+            <EditText
+                android:id="@+id/eLName"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="20dp"
+                android:backgroundTint="@color/colorWhite"
+                android:textColor="@color/colorWhite" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/eLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="7dp"
+                android:layout_toStartOf="@id/eMI"
+                android:text="Middle Initial: "
+                android:textColor="@color/colorWhite"
+                android:textSize="16dp" />
+
+            <EditText
+                android:id="@+id/eMI"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="20dp"
+                android:backgroundTint="@color/colorWhite"
+                android:textColor="@color/colorWhite" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/eLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="7dp"
+                android:layout_toStartOf="@id/eEmail"
+                android:text="Email: "
+                android:textColor="@color/colorWhite"
+                android:textSize="16dp" />
+
+            <EditText
+                android:id="@+id/eEmail"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="20dp"
+                android:backgroundTint="@color/colorWhite"
+                android:textColor="@color/colorWhite" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/cLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="7dp"
+                android:layout_toStartOf="@id/eCP"
+                android:text="Cellphone:"
+                android:textColor="@color/colorWhite"
+                android:textSize="16dp" />
+
+            <EditText
+                android:id="@+id/eCP"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="20dp"
+                android:backgroundTint="@color/colorWhite"
+                android:textColor="@color/colorWhite" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/pLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="7dp"
+                android:layout_toStartOf="@id/ePass"
+                android:text="Password:"
+                android:textColor="@color/colorWhite"
+                android:textSize="16dp" />
+
+            <EditText
+                android:id="@+id/ePass"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="20dp"
+                android:backgroundTint="@color/colorWhite"
+                android:inputType="textPassword"
+                android:textColor="@color/colorWhite" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/pLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="7dp"
+                android:layout_toStartOf="@id/eConf"
+                android:text="Confirm Password:"
+                android:textColor="@color/colorWhite"
+                android:textSize="16dp" />
+
+            <EditText
+                android:id="@+id/eConf"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="20dp"
+                android:backgroundTint="@color/colorWhite"
+                android:inputType="textPassword"
+                android:textColor="@color/colorWhite" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/pLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textAlignment="textEnd"
+                android:layout_marginRight="7dp"
+                android:layout_toStartOf="@id/eNo"
+                android:text="House No./ Unit No./ Floor:"
+                android:textColor="@color/colorWhite"
+                android:textSize="16dp" />
+
+            <EditText
+                android:id="@+id/eNo"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="20dp"
+                android:backgroundTint="@color/colorWhite"
+                android:textColor="@color/colorWhite" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/pLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/eCity"
+                android:text="City: "
+                android:textColor="@color/colorWhite"
+                android:textSize="16dp" />
+
+            <EditText
+                android:id="@+id/eCity"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="20dp"
+                android:backgroundTint="@color/colorWhite"
+                android:textColor="@color/colorWhite" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/pLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="7dp"
+                android:layout_toStartOf="@id/eStreet"
+                android:text="Street: "
+                android:textColor="@color/colorWhite"
+                android:textSize="16dp" />
+
+            <EditText
+                android:id="@+id/eStreet"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="20dp"
+                android:backgroundTint="@color/colorWhite"
+                android:textColor="@color/colorWhite" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@id/pLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/pEdit"
+                android:layout_toStartOf="@+id/eSub"
+                android:textAlignment="textEnd"
+                android:text="Subdivision/Barangay: "
+                android:textColor="@color/colorWhite"
+                android:textSize="16dp" />
+
+            <EditText
+                android:id="@+id/eSub"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="20dp"
+                android:backgroundTint="@color/colorWhite"
+                android:textColor="@color/colorWhite" />
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btnReg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="16dp"
-            android:text="Last Name: "
-            android:id="@+id/eLabel"
-            android:layout_toStartOf="@id/eEdit"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="7dp"/>
-
-        <EditText
-            android:layout_width="160dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:id="@+id/eEdit"
-            android:layout_marginRight="20dp"/>
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="12dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="16dp"
-            android:text="Middle Initial: "
-            android:id="@+id/eLabel"
-            android:layout_toStartOf="@id/eEdit"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="7dp"/>
-
-        <EditText
-            android:layout_width="160dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:id="@+id/eEdit"
-            android:layout_marginRight="20dp"/>
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="12dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="16dp"
-            android:text="Email: "
-            android:id="@+id/eLabel"
-            android:layout_toStartOf="@id/eEdit"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="7dp"/>
-
-        <EditText
-            android:layout_width="160dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:id="@+id/eEdit"
-            android:layout_marginRight="20dp"/>
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="12dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="16dp"
-            android:text="Cellphone:"
-            android:id="@+id/cLabel"
-            android:layout_toStartOf="@id/cEdit"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="7dp"/>
-
-        <EditText
-            android:layout_width="160dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:id="@+id/cEdit"
-            android:layout_marginRight="20dp"/>
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="12dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="16dp"
-            android:text="Password:"
-            android:id="@+id/pLabel"
-            android:layout_toStartOf="@id/pEdit"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="7dp"/>
-
-        <EditText
-            android:layout_width="160dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:inputType="textPassword"
-            android:id="@+id/pEdit"
-            android:layout_marginRight="20dp"/>
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="12dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="16dp"
-            android:text="House No./ Unit No./ Floor:"
-            android:id="@+id/pLabel"
-            android:layout_toStartOf="@id/pEdit"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="7dp"/>
-        <EditText
-            android:layout_width="160dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:id="@+id/pEdit"
-            android:layout_marginRight="20dp"/>
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="12dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="16dp"
-            android:text="City: "
-            android:id="@+id/pLabel"
-            android:layout_toStartOf="@id/pEdit"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="7dp"/>
-        <EditText
-            android:layout_width="160dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:id="@+id/pEdit"
-            android:layout_marginRight="20dp"/>
-
-    </RelativeLayout>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="12dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="16dp"
-            android:text="Street: "
-            android:id="@+id/pLabel"
-            android:layout_toStartOf="@id/pEdit"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="7dp"/>
-        <EditText
-            android:layout_width="160dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:id="@+id/pEdit"
-            android:layout_marginRight="20dp"/>
-
-    </RelativeLayout>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="12dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="16dp"
-            android:text="Subdivision/Barangay: "
-            android:id="@+id/pLabel"
-            android:layout_toStartOf="@id/pEdit"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="7dp"/>
-        <EditText
-            android:layout_width="160dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:id="@+id/pEdit"
-            android:layout_marginRight="20dp"/>
-
-    </RelativeLayout>
-    <Button
-        android:layout_gravity="end"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Register"
-        android:id="@+id/rBtn"/>
+            android:layout_gravity="end"
+            android:background="@color/colorRedOrange"
+            android:text="Register"
+            android:textColor="@color/colorWhite" />
     </LinearLayout>
 </ScrollView>
