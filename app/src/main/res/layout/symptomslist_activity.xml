@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_weight="13"
+    android:weightSum="13"
     android:orientation="vertical">
 
     <RelativeLayout
@@ -24,7 +24,7 @@
     <android.support.v7.widget.RecyclerView
         android:id="@+id/symptomsList"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_weight="12">
     </android.support.v7.widget.RecyclerView>
 
