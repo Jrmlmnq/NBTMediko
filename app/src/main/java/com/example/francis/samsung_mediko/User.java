@@ -1,5 +1,7 @@
 package com.example.francis.samsung_mediko;
 
+import com.google.android.gms.maps.model.LatLng;
+
 import java.util.Map;
 
 public class User {
@@ -9,18 +11,21 @@ public class User {
     private String lastName;
     private String mI;
     private String gender;
+    private String address;
+    private LatLng geoLoc;
     private Map<String, Boolean> doctorKeys;
     private boolean premium;
 
     public User(){}
 
-
-    public User(String email, String firstName, String lastName, String mI, String gender, Map<String, Boolean> doctorKeys, boolean premium) {
+    public User(String email, String firstName, String lastName, String mI, String gender, String address, LatLng geoLoc, Map<String, Boolean> doctorKeys, boolean premium) {
         this.email = email;
         this.firstName = firstName;
         this.lastName = lastName;
         this.mI = mI;
         this.gender = gender;
+        this.address = address;
+        this.geoLoc = geoLoc;
         this.doctorKeys = doctorKeys;
         this.premium = premium;
     }
@@ -67,6 +72,22 @@ public class User {
 
     public Map<String, Boolean> getDoctorKeys() {
         return doctorKeys;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public LatLng getGeoLoc() {
+        return geoLoc;
+    }
+
+    public void setGeoLoc(LatLng geoLoc) {
+        this.geoLoc = geoLoc;
     }
 
     public void setDoctorKeys(Map<String, Boolean> doctorKeys) {
