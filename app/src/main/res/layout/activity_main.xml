@@ -9,21 +9,21 @@
         android:id="@+id/topLayer"
         android:layout_height="80dp"
         android:layout_width="match_parent"
-        android:background="#034ea2"
+        android:background="@color/colorPBlue"
         android:gravity="center_vertical">
 
         <ImageButton
             android:layout_width="50dp"
-            android:layout_height="40dp"
+            android:layout_height="50dp"
             android:layout_marginStart="5dp"
             android:id="@+id/logOutBtn"/>
 
         <ImageView
-            android:background="@android:color/white"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_toEndOf="@id/logOutBtn"
             android:id="@+id/userProfilePic"
+            android:src="@drawable/boy"
             android:layout_marginLeft="30dp"/>
 
         <TextView
