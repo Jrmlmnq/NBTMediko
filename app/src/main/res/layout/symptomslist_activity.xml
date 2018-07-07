@@ -3,14 +3,12 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:weightSum="13"
     android:orientation="vertical">
 
     <RelativeLayout
-        android:layout_height="wrap_content"
+        android:layout_height="80dp"
         android:layout_width="match_parent"
         android:background="#034ea2"
-        android:layout_weight="1"
         android:gravity="center_vertical">
 
         <ImageButton
@@ -21,11 +19,22 @@
 
     </RelativeLayout>
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/symptomsList"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="12">
-    </android.support.v7.widget.RecyclerView>
+        android:layout_height="match_parent">
 
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/symptomsList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <xyz.danoz.recyclerviewfastscroller.vertical.VerticalRecyclerViewFastScroller
+                android:layout_width="20dp"
+                android:layout_height="match_parent">
+
+            </xyz.danoz.recyclerviewfastscroller.vertical.VerticalRecyclerViewFastScroller>
+
+        </android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
 </LinearLayout>

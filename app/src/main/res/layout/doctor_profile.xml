@@ -6,7 +6,7 @@
     android:orientation="vertical">
 
     <RelativeLayout
-        android:layout_height="wrap_content"
+        android:layout_height="300dp"
         android:layout_width="match_parent"
         android:background="#034ea2"
         android:padding="20dp">
@@ -37,7 +37,8 @@
 
         <TextView
             android:id="@+id/doctorDescription2"
-            android:layout_marginTop="190dp"
+            android:layout_below="@id/docProfilePic"
+            android:layout_marginTop="15dp"
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:text="jsdjhafdbjfjhdbjhsdbfdlsfsadgubviuwefhusdifjsoifgreahgiusdfnkdusfuiafnasnfkjgkjasdkdjsfnaskjfdsjkvsfsdfsfsfsffxsdfv"/>
