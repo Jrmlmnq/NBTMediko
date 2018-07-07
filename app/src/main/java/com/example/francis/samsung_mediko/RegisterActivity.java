@@ -14,11 +14,15 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class RegisterActivity extends AppCompatActivity{
 
     private static final String TAG = "REGISTRATION";
     private FirebaseAuth mAuth;
+    private DatabaseReference mDatabase;
+    public User user;
 
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -26,6 +30,8 @@ public class RegisterActivity extends AppCompatActivity{
         setContentView(R.layout.register_activity);
 
         mAuth = FirebaseAuth.getInstance();
+        mDatabase = FirebaseDatabase.getInstance().getReference();
+        final DatabaseReference refUsers = mDatabase.child("users");
         Button backBtn = (Button) findViewById(R.id.registerBackButton);
         Button regBtn = (Button) findViewById(R.id.rBtn);
 
@@ -41,6 +47,7 @@ public class RegisterActivity extends AppCompatActivity{
             public void onClick(View view) {
                 String email = (String) ((TextView) findViewById(R.id.eEdit)).getText().toString();
                 String password = (String) ((TextView) findViewById(R.id.pEdit)).getText().toString();
+                user = new User(email);
                 mAuth.createUserWithEmailAndPassword(email, password)
                         .addOnCompleteListener(RegisterActivity.this, new OnCompleteListener<AuthResult>() {
                             @Override
@@ -48,7 +55,8 @@ public class RegisterActivity extends AppCompatActivity{
                                 if (task.isSuccessful()) {
                                     // Sign in success, update UI with the signed-in user's information
                                     Log.d(TAG, "createUserWithEmail:success");
-                                    FirebaseUser user = mAuth.getCurrentUser();
+                                    FirebaseUser currUser = mAuth.getCurrentUser();
+                                    refUsers.child(currUser.getUid()).setValue(user);
                                 } else {
                                     // If sign in fails, display a message to the user.
                                     Log.w(TAG, "createUserWithEmail:failure", task.getException());
