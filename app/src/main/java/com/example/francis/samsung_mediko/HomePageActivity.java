@@ -14,12 +14,12 @@ public class HomePageActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // Get the different image buttons here
-        CardView listOfMedicines = (CardView) findViewById(R.id.medicineList);
-        CardView listOfSymptoms  = (CardView) findViewById(R.id.symptomsList);
-        CardView deliveryStatus  = (CardView) findViewById(R.id.deliveryStatus);
-        CardView myDoctors       = (CardView) findViewById(R.id.myDoctors);
-        CardView myProfile       = (CardView) findViewById(R.id.myProfile);
-        CardView samsungBtn      = (CardView) findViewById(R.id.samsungBtn);
+        CardView listOfMedicines = (CardView) findViewById(R.id.toMedicineList);
+        CardView listOfSymptoms  = (CardView) findViewById(R.id.toSymptomsList);
+        CardView deliveryStatus  = (CardView) findViewById(R.id.toDeliveryStatus);
+        CardView myDoctors       = (CardView) findViewById(R.id.toDoctorList);
+        CardView myProfile       = (CardView) findViewById(R.id.toMyProfile);
+        CardView samsungBtn      = (CardView) findViewById(R.id.toSamsung321);
 
         //set the action listeners for  the different
         listOfMedicines.setOnClickListener(new View.OnClickListener(){
