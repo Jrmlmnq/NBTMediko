@@ -14,6 +14,7 @@ public class User {
 
     public User(){}
 
+
     public User(String email, String firstName, String lastName, String mI, String gender, Map<String, Boolean> doctorKeys, boolean premium) {
         this.email = email;
         this.firstName = firstName;
