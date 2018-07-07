@@ -9,4 +9,8 @@
     <color name="colorGreen">#98FB98</color>
     <color name="colorSamsung">#0c4da2</color>
     <color name="colorPeach">#FFDAB9</color>
+    <color name="colorGray">#fafafa</color>
+    <color name="colorPBlue">#09c6df</color>
+    <color name="colorEBlue">#0bcce6</color>
+    <color name="colorWhite">#ffffff</color>
 </resources>
