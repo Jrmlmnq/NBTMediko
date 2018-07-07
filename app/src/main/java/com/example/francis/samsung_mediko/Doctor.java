@@ -2,27 +2,28 @@ package com.example.francis.samsung_mediko;
 
 import java.util.Map;
 
-public class User {
+public class Doctor {
 
     private String email;
     private String firstName;
     private String lastName;
     private String mI;
     private String gender;
-    private Map<String, Boolean> doctorKeys;
-    private boolean premium;
+    private Map<String, Boolean> hospitalKeys;
+    private Map<String, Boolean> patientKeys;
+    private boolean atWork;
 
-    public User(){}
+    public Doctor(){}
 
-
-    public User(String email, String firstName, String lastName, String mI, String gender, Map<String, Boolean> doctorKeys, boolean premium) {
+    public Doctor(String email, String firstName, String lastName, String mI, String gender, Map<String, Boolean> hospitalKeys, Map<String, Boolean> patientKeys, boolean atWork) {
         this.email = email;
         this.firstName = firstName;
         this.lastName = lastName;
         this.mI = mI;
         this.gender = gender;
-        this.doctorKeys = doctorKeys;
-        this.premium = premium;
+        this.hospitalKeys = hospitalKeys;
+        this.patientKeys = patientKeys;
+        this.atWork = atWork;
     }
 
     public String getEmail() {
@@ -65,19 +66,27 @@ public class User {
         this.gender = gender;
     }
 
-    public Map<String, Boolean> getDoctorKeys() {
-        return doctorKeys;
+    public Map<String, Boolean> getHospitalKeys() {
+        return hospitalKeys;
     }
 
-    public void setDoctorKeys(Map<String, Boolean> doctorKeys) {
-        this.doctorKeys = doctorKeys;
+    public void setHospitalKeys(Map<String, Boolean> hospitalKeys) {
+        this.hospitalKeys = hospitalKeys;
     }
 
-    public boolean isPremium() {
-        return premium;
+    public Map<String, Boolean> getPatientKeys() {
+        return patientKeys;
     }
 
-    public void setPremium(boolean premium) {
-        this.premium = premium;
+    public void setPatientKeys(Map<String, Boolean> patientKeys) {
+        this.patientKeys = patientKeys;
+    }
+
+    public boolean isAtWork() {
+        return atWork;
+    }
+
+    public void setAtWork(boolean atWork) {
+        this.atWork = atWork;
     }
 }
