@@ -1,5 +1,7 @@
 package com.example.francis.samsung_mediko;
 
+import com.google.android.gms.maps.model.LatLng;
+
 import java.util.Map;
 
 public class Order {
@@ -9,15 +11,19 @@ public class Order {
     private String status;
     private String userKey;
     private String delivererKey;
+    private String place;
+    private LatLng geoLoc;
 
     public Order(){}
 
-    public Order(Map<String, Integer> medicineCount, float totalPrice, String status, String userKey, String delivererKey) {
+    public Order(Map<String, Integer> medicineCount, float totalPrice, String status, String userKey, String delivererKey, String place, LatLng geoLoc) {
         this.medicineCount = medicineCount;
         this.totalPrice = totalPrice;
         this.status = status;
         this.userKey = userKey;
         this.delivererKey = delivererKey;
+        this.place = place;
+        this.geoLoc = geoLoc;
     }
 
     public Map<String, Integer> getMedicineCount() {
@@ -58,5 +64,21 @@ public class Order {
 
     public void setDelivererKey(String delivererKey) {
         this.delivererKey = delivererKey;
+    }
+
+    public String getPlace() {
+        return place;
+    }
+
+    public void setPlace(String place) {
+        this.place = place;
+    }
+
+    public LatLng getGeoLoc() {
+        return geoLoc;
+    }
+
+    public void setGeoLoc(LatLng geoLoc) {
+        this.geoLoc = geoLoc;
     }
 }
