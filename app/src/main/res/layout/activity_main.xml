@@ -18,6 +18,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <android.support.v7.widget.CardView
+            android:id="@+id/medicineList"
             android:layout_width="160dp"
             android:layout_height="190dp"
             android:layout_margin="10dp">
@@ -31,6 +32,7 @@
                     android:layout_height="match_parent"
                     android:gravity="center_horizontal">
                     <ImageView
+
                         android:layout_width="150dp"
                         android:layout_height="150dp"
                         android:background="@drawable/circlebackgroundredorange"/>
@@ -52,6 +54,7 @@
             </LinearLayout>
         </android.support.v7.widget.CardView>
         <android.support.v7.widget.CardView
+            android:id="@+id/symptomsList"
             android:layout_width="160dp"
             android:layout_height="190dp"
             android:layout_margin="10dp">
@@ -94,6 +97,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <android.support.v7.widget.CardView
+            android:id="@+id/deliveryStatus"
             android:layout_width="160dp"
             android:layout_height="190dp"
             android:layout_margin="10dp">
@@ -107,6 +111,7 @@
                     android:layout_height="match_parent"
                     android:gravity="center_horizontal">
                     <ImageView
+
                         android:layout_width="150dp"
                         android:layout_height="150dp"
                         android:background="@drawable/circlebackgroundbrown"/>
@@ -130,6 +135,7 @@
             </LinearLayout>
         </android.support.v7.widget.CardView>
         <android.support.v7.widget.CardView
+        android:id="@+id/myDoctors"
         android:layout_width="160dp"
         android:layout_height="190dp"
         android:layout_margin="10dp">
@@ -143,6 +149,7 @@
                 android:layout_height="match_parent"
                 android:gravity="center_horizontal">
                 <ImageView
+
                     android:layout_width="150dp"
                     android:layout_height="150dp"
                     android:background="@drawable/circlebackgroundblue"/>
@@ -174,6 +181,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <android.support.v7.widget.CardView
+            android:id="@+id/myProfile"
             android:layout_width="160dp"
             android:layout_height="190dp"
             android:layout_margin="10dp">
@@ -187,6 +195,7 @@
                     android:layout_height="match_parent"
                     android:gravity="center_horizontal">
                     <ImageView
+
                         android:layout_width="150dp"
                         android:layout_height="150dp"
                         android:background="@drawable/circlebackgroundpeach"/>
@@ -208,6 +217,7 @@
             </LinearLayout>
         </android.support.v7.widget.CardView>
         <android.support.v7.widget.CardView
+            android:id="@+id/samsungBtn"
             android:layout_width="160dp"
             android:layout_height="190dp"
             android:layout_margin="10dp">
@@ -221,6 +231,7 @@
                     android:layout_height="match_parent"
                     android:gravity="center_horizontal">
                     <ImageView
+
                         android:layout_width="150dp"
                         android:layout_height="150dp"
                         android:background="@drawable/circlebackgroundsamsung"/>
