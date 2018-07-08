@@ -9,16 +9,27 @@ public class Doctor {
     private String lastName;
     private String mI;
     private String gender;
+    private String uid;
+    private String desc;
     private Map<String, Boolean> hospitalKeys;
     private Map<String, Boolean> patientKeys;
     private boolean atWork;
 
     public Doctor(){}
 
-    public Doctor(String email, String firstName, String lastName, String mI, String gender, Map<String, Boolean> hospitalKeys, Map<String, Boolean> patientKeys, boolean atWork) {
+    public Doctor(String firstName, String lastName, String email, String desc){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.desc = desc;
+
+    }
+
+    public Doctor(String email, String firstName, String lastName, String desc, String mI, String gender, Map<String, Boolean> hospitalKeys, Map<String, Boolean> patientKeys, boolean atWork) {
         this.email = email;
         this.firstName = firstName;
         this.lastName = lastName;
+        this.desc = desc;
         this.mI = mI;
         this.gender = gender;
         this.hospitalKeys = hospitalKeys;
@@ -26,9 +37,15 @@ public class Doctor {
         this.atWork = atWork;
     }
 
+    public void setUid(String uid){this.uid = uid;}
+
+    public String getUid() { return this.uid;}
     public String getEmail() {
         return email;
     }
+
+    public String getDesc() {return this.desc;}
+    public void setDesc(String desc){this.desc = desc;}
 
     public void setEmail(String email) {
         this.email = email;
