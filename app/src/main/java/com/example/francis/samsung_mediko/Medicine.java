@@ -13,6 +13,12 @@ public class Medicine {
 
     public Medicine(){}
 
+    public Medicine(String name, float price, String symptoms){
+        this.name = name;
+        this.price = price;
+        this.symptoms = symptoms;
+    }
+
     public Medicine(String name, String description, float dosage, float price, String ages, String medicineType, String symptoms, String sideEffects) {
         this.name = name;
         this.description = description;

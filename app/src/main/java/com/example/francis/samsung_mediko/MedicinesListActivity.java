@@ -56,8 +56,10 @@ public class MedicinesListActivity extends AppCompatActivity {
         dbRef.addChildEventListener(new ChildEventListener() {
 
             @Override
-            public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
-                Medicine m = dataSnapshot.getValue(Medicine.class);
+            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+                Medicine m = new Medicine();
+                m = dataSnapshot.getValue(Medicine.class);
+
                 lMedicines.add(m);
                 rv.setAdapter(myAdapter);
             }
@@ -105,9 +107,9 @@ public class MedicinesListActivity extends AppCompatActivity {
 
             public MedicineViewHolder(View itemView) {
                 super(itemView);
-                name = findViewById(R.id.medicineName);
-                type = findViewById(R.id.medicineType);
-                price = findViewById(R.id.medicinePrice);
+                name = itemView.findViewById(R.id.medicineName);
+                type = itemView.findViewById(R.id.medicineType);
+                price = itemView.findViewById(R.id.medicinePrice);
             }
         }
     }
