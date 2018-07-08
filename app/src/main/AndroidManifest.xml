@@ -24,6 +24,8 @@
         </activity>
         <activity android:name=".SymptomsListActivity">
         </activity>
+        <activity android:name=".MyProfileActivity">
+        </activity>
     </application>
 
 </manifest>

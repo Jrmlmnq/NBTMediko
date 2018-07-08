@@ -29,7 +29,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Name of a User"
+            android:textColor="@color/colorWhite"
             android:textSize="16sp"
             android:layout_toEndOf="@id/userProfilePic"
             android:layout_marginTop="8dp"
