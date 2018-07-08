@@ -27,8 +27,8 @@
         android:id="@+id/symptomsList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:fastScrollEnabled="true"
-        app:fastScrollVerticalThumbDrawable="@drawable/thumb_drawable">
+        app:fastScrollEnabled="true">
+        <!--app:fastScrollVerticalThumbDrawable="@drawable/thumb_drawable">-->
 
     </android.support.v7.widget.RecyclerView>
 </LinearLayout>
