@@ -90,7 +90,7 @@ public class DoctorsListActivity extends AppCompatActivity {
         });
     }
 
-    public class MyAdapter extends  RecyclerView.Adapter<MyAdapter.DoctorViewHolder>{
+    private class MyAdapter extends  RecyclerView.Adapter<MyAdapter.DoctorViewHolder>{
         List<Doctor> listArray;
 
         public MyAdapter(List<Doctor> listArray){

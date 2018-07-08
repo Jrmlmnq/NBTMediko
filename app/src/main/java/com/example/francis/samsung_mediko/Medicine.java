@@ -11,7 +11,7 @@ public class Medicine {
     private String symptoms;
     private String sideEffects;
 
-    private Medicine(){}
+    public Medicine(){}
 
     public Medicine(String name, String description, float dosage, float price, String ages, String medicineType, String symptoms, String sideEffects) {
         this.name = name;
