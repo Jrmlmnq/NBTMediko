@@ -1,88 +1,134 @@
 package com.example.francis.samsung_mediko;
 
-import android.content.Intent;
+
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.design.widget.TabLayout;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
-import com.firebase.ui.database.FirebaseRecyclerAdapter;
-import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.firebase.database.ChildEventListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.Query;
 
-import java.util.zip.Inflater;
+import org.w3c.dom.Text;
 
-public class DoctorsListActivity extends AppCompatActivity{
+import java.util.ArrayList;
+import java.util.List;
+
+public class DoctorsListActivity extends AppCompatActivity {
+
+    RecyclerView rv;
+    MyAdapter myAdapter;
+    List<Doctor> lDoctors;
+    FirebaseDatabase firebaseDatabase;
+    DatabaseReference dbRef;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.doctorslist_activity);
 
-        RecyclerView rv = (RecyclerView) findViewById(R.id.doctorListContainer);
+        rv = (RecyclerView) findViewById(R.id.doctorListContainer);
+        rv.setHasFixedSize(true);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
+        rv.setLayoutManager(layoutManager);
+        rv.setItemAnimator(new DefaultItemAnimator());
+        rv.addItemDecoration(new DividerItemDecoration(getApplicationContext(), LinearLayoutManager.VERTICAL));
 
-        final DatabaseReference doctorDBReference = FirebaseDatabase.getInstance()
-                      .getReference()
-                      .child("doctors");
+        lDoctors = new ArrayList<>();
 
-        Query query = doctorDBReference;
-        Log.i("QUERY:" , query.toString());
-        FirebaseRecyclerOptions firebaseDoctorOptions = new FirebaseRecyclerOptions.Builder<Doctor>()
-                                                            .setQuery(query, Doctor.class)
-                                                            .build();
+        myAdapter = new MyAdapter(lDoctors);
 
-        FirebaseRecyclerAdapter<Doctor, DoctorViewHolder> adapter = new FirebaseRecyclerAdapter<Doctor, DoctorViewHolder>(firebaseDoctorOptions){
+        firebaseDatabase = FirebaseDatabase.getInstance();
 
+        getDataFromFirebase();
+    }
+
+    public void getDataFromFirebase(){
+        dbRef = firebaseDatabase.getReference().child("doctors");
+
+        dbRef.addChildEventListener(new ChildEventListener() {
             @Override
-            public DoctorViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.doctorlist, parent, false);
+            public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+                Doctor d = new Doctor();
+                d = dataSnapshot.getValue(Doctor.class);
 
-                return new DoctorViewHolder(view);
+                lDoctors.add(d);
+
+                rv.setAdapter(myAdapter);
             }
 
             @Override
-            protected void onBindViewHolder(DoctorViewHolder holder, int position, Doctor model) {
-                Log.i("DoctorName:", model.getFirstName() + " " + model.getLastName());
-                Log.i("DoctorDesc", model.getDesc() + " ");
-                holder.doctorName.setText(model.getFirstName() + " " + model.getLastName());
-                holder.doctorDescription.setText(model.getDesc());
+            public void onChildChanged(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
 
-                String key = getRef(position).getKey();
-                holder.itemView.setTag(key);
             }
 
-            /*
             @Override
-            protected void populateViewHolder(DoctorViewHolder viewHolder, Doctor model, int position) {
-
-                /*
-                viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        Intent intent = new Intent(getBaseContext(), ViewPostActivity.class);
-                        intent.putExtra(Post.EXTRA_KEY, view.getTag().toString());
-                        startActivity(intent);
-                    }
-                });
+            public void onChildRemoved(@NonNull DataSnapshot dataSnapshot) {
 
             }
-            */
-        };
 
+            @Override
+            public void onChildMoved(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
 
-        rv.setAdapter(adapter);
-        rv.setLayoutManager(new LinearLayoutManager(getBaseContext()));
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+    }
+
+    public class MyAdapter extends  RecyclerView.Adapter<MyAdapter.DoctorViewHolder>{
+        List<Doctor> listArray;
+
+        public MyAdapter(List<Doctor> listArray){
+            this.listArray = listArray;
+        }
+
+        @NonNull
+        @Override
+        public DoctorViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+            View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.doctorlist, parent, false);
+
+            return new DoctorViewHolder(view);
+        }
+
+        @Override
+        public void onBindViewHolder(@NonNull DoctorViewHolder holder, int position) {
+            Doctor d = new Doctor();
+            d = listArray.get(position);
+
+            holder.desc.setText(d.getDesc());
+            holder.name.setText(d.getFirstName() + " "+ d.getLastName());
+        }
+
+        @Override
+        public int getItemCount() {
+            return listArray.size();
+        }
+
+        public class DoctorViewHolder extends RecyclerView.ViewHolder{
+
+           TextView name;
+           TextView desc;
+
+           public DoctorViewHolder(View itemView) {
+               super(itemView);
+               name = (TextView) itemView.findViewById(R.id.doctorName);
+               desc = (TextView) itemView.findViewById(R.id.doctorDescription);
+           }
+       }
     }
 }
