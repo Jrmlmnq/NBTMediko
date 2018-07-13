@@ -1,5 +1,6 @@
 package com.example.francis.samsung_mediko;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -61,6 +62,7 @@ public class MedicinesListActivity extends AppCompatActivity {
                 m = dataSnapshot.getValue(Medicine.class);
 
                 lMedicines.add(m);
+
                 rv.setAdapter(myAdapter);
             }
 
@@ -88,12 +90,24 @@ public class MedicinesListActivity extends AppCompatActivity {
         }
 
         @Override
-        public void onBindViewHolder(@NonNull MedicineViewHolder holder, int position) {
+        public void onBindViewHolder(@NonNull MedicineViewHolder holder, final int position) {
             Medicine m = new Medicine();
             m = listArray.get(position);
             holder.name.setText(m.getName());
             holder.type.setText(m.getSymptoms());
             holder.price.setText("Php" + m.getPrice());
+
+            holder.itemView.setOnClickListener(new View.OnClickListener(){
+
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(getBaseContext(), DetailedMedicineActivity.class);
+
+                    intent.putExtra(DetailedMedicineActivity.EXTRA_POST, "medicine_" + (position+1));
+
+                    startActivity(intent);
+                }
+            });
         }
 
         @Override

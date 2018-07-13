@@ -73,7 +73,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="P1000"/>
+            android:text="P1000"
+            android:id="@+id/detailedMedicinePrice"/>
     </LinearLayout>
 
     <LinearLayout
