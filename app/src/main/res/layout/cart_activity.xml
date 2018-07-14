@@ -22,7 +22,7 @@
         android:background="@color/colorEBlue">
 
         <android.support.v7.widget.RecyclerView
-            android:id="@+id/cart_container"
+            android:id="@+id/cart_list"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@android:color/transparent">
@@ -31,7 +31,7 @@
         <android.support.v7.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            app:cardBackgroundColor="#504aff"
+            app:cardBackgroundColor="#0a4bff"
             android:layout_alignParentBottom="true">
 
             <RelativeLayout
