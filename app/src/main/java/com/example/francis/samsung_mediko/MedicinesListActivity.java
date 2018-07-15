@@ -1,6 +1,7 @@
 package com.example.francis.samsung_mediko;
 
 import android.content.Intent;
+import android.media.Image;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -12,6 +13,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.google.firebase.database.ChildEventListener;
@@ -30,11 +33,20 @@ public class MedicinesListActivity extends AppCompatActivity {
     List<Medicine> lMedicines;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference dbRef;
+    ImageButton btnBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.medicineslist_activity);
+
+        btnBack = findViewById(R.id.backBtn);
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
 
         rv = findViewById(R.id.medicineListContainer);
         rv.setHasFixedSize(true);

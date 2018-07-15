@@ -22,13 +22,19 @@
         <activity android:name=".SymptomsListActivity"></activity>
         <activity android:name=".MyProfileActivity"></activity>
         <activity android:name=".MedicinesListActivity"></activity>
-
         <activity android:name=".DetailedMedicineActivity"
             android:parentActivityName=".MedicinesListActivity">
             <!-- The meta-data tag is required if you support API level 15 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MedicinesListActivity" />
+        </activity>
+        <activity android:name=".DoctorProfileActivity"
+            android:parentActivityName=".DoctorsListActivity">
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".DoctorsListActivity" />
         </activity>
     </application>
 

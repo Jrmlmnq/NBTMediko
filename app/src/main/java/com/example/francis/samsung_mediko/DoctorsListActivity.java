@@ -1,6 +1,7 @@
 package com.example.francis.samsung_mediko;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -12,6 +13,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.google.firebase.database.ChildEventListener;
@@ -32,11 +35,20 @@ public class DoctorsListActivity extends AppCompatActivity {
     List<Doctor> lDoctors;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference dbRef;
+    ImageButton btnBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.doctorslist_activity);
+
+        btnBack = findViewById(R.id.backBtn);
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
 
         rv = (RecyclerView) findViewById(R.id.doctorListContainer);
         rv.setHasFixedSize(true);
@@ -69,24 +81,16 @@ public class DoctorsListActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onChildChanged(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
-
-            }
+            public void onChildChanged(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {}
 
             @Override
-            public void onChildRemoved(@NonNull DataSnapshot dataSnapshot) {
-
-            }
+            public void onChildRemoved(@NonNull DataSnapshot dataSnapshot) {}
 
             @Override
-            public void onChildMoved(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
-
-            }
+            public void onChildMoved(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {}
 
             @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
+            public void onCancelled(@NonNull DatabaseError databaseError) {}
         });
     }
 
@@ -106,12 +110,21 @@ public class DoctorsListActivity extends AppCompatActivity {
         }
 
         @Override
-        public void onBindViewHolder(@NonNull DoctorViewHolder holder, int position) {
+        public void onBindViewHolder(@NonNull DoctorViewHolder holder, final int position) {
             Doctor d = new Doctor();
             d = listArray.get(position);
 
             holder.desc.setText(d.getDesc());
             holder.name.setText(d.getFirstName() + " "+ d.getLastName());
+            holder.itemView.setOnClickListener(new View.OnClickListener(){
+
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(getBaseContext(), DoctorProfileActivity.class);
+                    intent.putExtra(DoctorProfileActivity.EXTRA_POST, "doctor_" + (position+1));
+                    startActivity(intent);
+                }
+            });
         }
 
         @Override

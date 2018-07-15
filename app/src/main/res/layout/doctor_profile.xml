@@ -32,7 +32,7 @@
             android:layout_marginTop="12dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="FirstName LastName"
+            android:textColor="@color/colorWhite"
             android:layout_gravity="center_horizontal"
             android:textSize="20sp"/>
 
@@ -57,7 +57,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Male"
+                android:text=""
                 android:id="@+id/gender"/>
 
         </LinearLayout>
@@ -75,7 +75,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="sfnkjfnksadjfnakjfnajfasnfsibviabfisefbsfsdbfksdjfsdsdfdsffcfc"
+                android:text=""
                 android:id="@+id/description"/>
 
         </LinearLayout>
