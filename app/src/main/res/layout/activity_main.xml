@@ -44,6 +44,7 @@
             android:layout_height="40dp"
             android:layout_alignParentEnd="true"
             android:id="@+id/shoppingCartBtn"
+            android:background="@drawable/cart"
             android:layout_marginTop="5dp">
 
         </ImageButton>

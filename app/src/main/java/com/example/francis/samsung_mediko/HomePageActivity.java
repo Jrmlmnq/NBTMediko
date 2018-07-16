@@ -7,6 +7,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -39,6 +40,7 @@ public class HomePageActivity extends AppCompatActivity {
         CardView myDoctors       = (CardView) findViewById(R.id.toDoctorList);
         CardView myProfile       = (CardView) findViewById(R.id.toMyProfile);
         CardView samsungBtn      = (CardView) findViewById(R.id.toSamsung321);
+        ImageButton cartBtn      = (ImageButton) findViewById(R.id.shoppingCartBtn);
 
         tvName = (TextView) findViewById(R.id.nameLabel);
 
@@ -95,6 +97,14 @@ public class HomePageActivity extends AppCompatActivity {
         samsungBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
+
+            }
+        });
+
+        cartBtn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                startActivity(new Intent(getBaseContext(), DeliveryStatusActivity.class));
 
             }
         });
